@@ -1,0 +1,357 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex"><meta name="viewport" content="width=device-width,initial-scale=1"><title>租赁合同查询高仿真原型</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e9edf1;font-family:-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;color:#26364d}.wrap{padding:20px;display:flex;justify-content:center}.phone{width:390px;height:844px;background:#171717;border-radius:48px;padding:8px;box-shadow:0 18px 45px #0003}.screen{height:100%;border-radius:40px;overflow:hidden;background:#f5f6f8;position:relative}.status{height:34px;background:#e60020;color:#fff;padding:9px 18px 0;display:flex;justify-content:space-between;font-size:12px}.page{height:calc(100% - 34px);overflow-y:auto;padding-bottom:70px;display:none}.page.on{display:block}.head{height:50px;background:#e60020;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;position:sticky;top:0;z-index:5}.back,.more{position:absolute;border:0;background:none;color:inherit}.back{left:12px;font-size:28px}.more{right:15px;font-size:20px}.search{margin:11px 14px 7px;padding:10px 14px;background:#fff;border-radius:22px;color:#9aa6b5;font-size:12px}.search:before{content:"🔍";margin-right:7px}.muted{color:#929fb0;font-size:12px}.count{margin:8px 15px}.card{background:#fff;margin:9px 14px;border-radius:11px;padding:13px}.menu{padding:0 12px}.row{height:61px;border-bottom:1px solid #edf0f3;display:flex;align-items:center;gap:11px;position:relative}.ico{width:37px;height:37px;border-radius:10px;background:#fff0f2;color:#e60020;display:grid;place-items:center}.mt{font-size:14px}.ms{font-size:11px;color:#96a2b2;margin-top:4px}.arrow{position:absolute;right:2px;color:#9ba7b7;font-size:20px}.tabs{margin:10px 14px 8px;padding:3px;background:#fff;border-radius:22px;display:flex}.tab{flex:1;border:0;background:none;padding:9px;border-radius:18px;color:#69778b}.tab.sel{background:#e60020;color:#fff}.filters{display:flex;gap:6px;margin:8px 14px}.filter{flex:1;border:1px solid #e1e6eb;background:#fff;border-radius:18px;padding:8px 2px;color:#46566b;font-size:11px}.contract{position:relative;font-weight:400}.state{position:absolute;right:11px;top:11px;padding:3px 8px;border-radius:10px;font-size:10px}.green{background:#e7f8ed;color:#169c61}.orange{background:#fff1dc;color:#bd7a00}.blue{background:#eaf3ff;color:#4d80bd}.code{font-size:11px;color:#8290a5}.name{font-size:14px;margin:6px 0}.meta{font-size:12px;color:#8190a6;line-height:1.85}.amt{color:#ef1930;font-size:15px}.sect{margin:14px 14px 7px;border-left:4px solid #e60020;padding-left:7px;font-size:15px}.kv{display:flex;justify-content:space-between;gap:15px;padding:9px 0;border-bottom:1px solid #edf0f3;font-size:12px}.kv span:first-child{color:#8794a6}.kv span:last-child{text-align:right}.fileshead{display:flex;justify-content:space-between}.file{display:flex;align-items:center;gap:9px;padding:11px 0;border-bottom:1px solid #edf0f3}.check{appearance:none;width:20px;height:20px;border:3px solid #e60020;border-radius:6px}.check:checked{background:#e60020}.check:checked:after{content:"✓";color:#fff;position:relative;left:2px;top:-4px}.fb{min-width:0;flex:1}.fn{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fs{font-size:10px;color:#98a3b2;margin-top:5px}.signed{color:#17a169}.partial{color:#c47e00}.unsigned{color:#75859a}.view{border:0;background:#fff0f2;color:#e60020;border-radius:14px;padding:7px 10px}.actions{display:flex;gap:8px;margin:12px 14px}.btn{flex:1;padding:11px;border-radius:22px;border:1px solid #e60020;background:#fff;color:#e60020}.primary{background:#e60020;color:#fff}.pdfhead,.pdfstatus{background:#fff;color:#111}.pdf{background:#626262;padding:14px 0;min-height:680px}.paper{width:88%;height:630px;margin:auto;background:#fff;padding:42px 28px;position:relative}.pt{text-align:center;color:#111;font-size:15px;margin-bottom:25px}.line{height:7px;background:#e3e3e3;margin:11px}.seal{position:absolute;right:22px;bottom:50px;width:92px;height:92px;border:3px solid #e60020;border-radius:50%;color:#e60020;display:grid;place-items:center;text-align:center;font-size:11px;transform:rotate(-8deg)}.seal b{font-size:30px}.bottom{position:absolute;bottom:0;left:0;right:0;height:70px;background:#fff;border-top:1px solid #e2e5e8;display:grid;place-items:center}.dl{border:0;background:none;font-weight:700;font-size:14px}.dl i{display:block;color:#e60020;font-style:normal;font-size:28px;line-height:22px}.overlay{display:none;position:absolute;inset:0;background:#0007;z-index:30}.overlay.on{display:block}.sheet{display:none;position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:20px 20px 0 0;z-index:40}.sh{padding:16px 18px;border-bottom:1px solid #e8ebef;display:flex;justify-content:space-between}.sh button{border:0;background:none}.ok{color:#e60020}.opt{width:100%;height:50px;background:#fff;border:0;border-bottom:1px solid #edf0f3}.dialog{display:none;position:absolute;left:7%;right:7%;top:43%;transform:translateY(-50%);background:#fff;border-radius:20px;padding:24px;z-index:50}.dialog.on{display:block}.dialog h3{text-align:center}.dialog p{text-align:center;color:#8c98a8;font-size:13px}.dialog button{width:100%;padding:12px;margin-top:8px;border-radius:22px;border:1px solid #e4e8ed;background:#fff}.dialog .red{background:#ed2436;color:#fff;border:0}.nav{position:absolute;bottom:0;left:0;right:0;height:58px;background:#fff;border-top:1px solid #e4e7eb;display:flex;justify-content:space-around;align-items:center;font-size:11px}.nav div{text-align:center}.activeNav{color:#e60020}
+</style>
+<style id="minimal-diff-v3">
+/* 参考图1：搜索图标。仅替换图标，不改搜索框其他样式 */
+.search{position:relative;padding-left:38px}
+.search:before{content:"";position:absolute;left:14px;top:50%;transform:translateY(-50%);width:17px;height:17px;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAABKCAYAAAAhQqMXAAAEFUlEQVR4nO2cW3biMAyGlTmzlFJnLUDYS7IQeGYbELKWuOlePA8lHE+wHGNLtmnyv7SHXiI+/sgXWSmUUrCKXn9SB/BbtYJl0gqWSStYJq1gmbSCZdIKlkkrWCb9TR2ALimlGoZvGIavx2t93z++L8sSAAA2m8/71w8QQhRxo3RTkXrlJaVUXdf9B/BVVdUBAAD2+102kJOApYCJKRfIUVMBJ9BR1+tl/FalTBXRHNu2N6W96WiqqkMS97KD9XHpdJDSNQ5sr7q+aZqo7mUF6+rSEeR2u33pzY+zCNc7IaZ72cC6QC3L8mWYtusBwCzkWHBZBq85qJRAR2mwrNe+/0xxwyV37BzUWI5JHQepY21vhsOlNt2hofFwO5fMsXNQ67pOMp+cm5VwzRbINmFyhAoAIIQo6rouxpnHVF3XsVyXBOw4IpuUEqqu7XZrfL3ve2v8vgoGa0sBTdOE/nsyCSEKLJ7r9QJSSlK4bPuxVXXIbktPCFGMmzRTUaeEILCYW8uyTL67hGm/3xnzbd/3pK5lcSyWz3IRFh+la4PAmtyaYwqYSgiBupZK3mA5RtKYwlxLlQ68wep1KV255tapsLuKKh14gzXdNtiIm6s404EXWOx22Ww+wqKJLM504AV2GL6Nr+c+aE3FGS/ZdAtbi+cuU9yYcV6Rp2OfBy5TfepdhQ3Mr8gLLGf5+rdo8We3uO60xYPl0grWIIpU5wX2XWcArqJ4f2SOpRhJU4gr7jUVGEQxoHmBNV34XadgXHF7gjXvCVDXjbiFbX1S7Hl4gcXW2BRLwRxEsYfgnWPNa+z3GsCwCgiFvMGattyoC3Kc4q6AkM8KuE6WxBJVBcQbrK0gl7trsbI9ZQUkyLExysgcijEWBIG1uTbXKm7b3pRp7kp9yCQ4x2Ku5TgPFSopJXrOLLuTMJhrAfJKCVJKdTwerb9zPB7TnyvQhR3V7PseTqdTFq51/ZCp4JJNt7AjkqnhSinV6XQy5lVMFHBJmztSN1RMNXf7l2Vp3YQJOUZPukDY73fo+VOAnwEt1myhbW9WqFV1gLqurfGGOJelgc6leY7LvS4tptNrz8Xr49yknYmULfCuPbvYB0oNN4teWgA/yCNMALcN67kOHkq47N3fPu30HN3fo+ZSEBXcX/+8ApNiwI366BLXDm0KzU2luOFGfXSJ3qENwANY79m1wZnrpZ3rxe26DoQQaBzJn2LUtjc1DF9B1dIRJsBzvSp00eLbI5wcrC598WAapPTNns3m0/m5W5xwsb/NCiynOOGez+env1vMSZjQ5TbW0QhgPk+xGLAA4XCxfGraklwUWIBwuK4tTIsDCxAG17WFaZFgAfzhurZiZfWY09hyeSDP9XpRVXV4HJRzLZ0vZrplU+g+hmmq9g+tTRPBfCATyAAAAABJRU5ErkJggg==') center/contain no-repeat;margin:0}
+
+/* 综合查询：仅本轮指定图标 */
+.ref-icon{display:block;object-fit:contain}
+.nav-icon{width:24px;height:24px;margin:0 auto 2px}
+.contract-icon{width:29px;height:29px}
+.ico.contract-ico{background:#fff0f2}
+
+/* 筛选条件样式全部沿用Baseline，仅微调箭头位置 */
+.filter-caret{display:inline-block;position:relative;top:-1px;margin-left:4px}
+
+/* 合同卡片右上状态：去填充/边框/特殊字体色，颜色与合同编号一致 */
+.state{background:transparent!important;border:0!important;color:#8290a5!important;padding:3px 0!important}
+
+/* 第5个文本查看：只读灰态 */
+.view.readonly{background:#f1f2f4!important;color:#a6adb7!important;cursor:default}
+
+/* 文件详情：微信式“更多”菜单与首次引导 */
+.wx-sheet{display:none;position:absolute;left:0;right:0;bottom:0;background:#f7f7f7;border-radius:18px 18px 0 0;z-index:45;padding:18px 12px 10px}
+.wx-sheet.on{display:block}
+.wx-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:2px 2px 18px}
+.wx-item{text-align:center;color:#333;font-size:11px}
+.wx-icon{width:52px;height:52px;margin:0 auto 7px;border-radius:12px;background:#fff;display:grid;place-items:center;font-size:24px;color:#222}
+.wx-cancel{width:100%;height:48px;border:0;border-radius:12px;background:#fff;font-size:15px;color:#222}
+.guide{display:none;position:absolute;right:16px;top:82px;width:190px;background:#252525;color:#fff;border-radius:12px;padding:14px 14px 12px;z-index:55;font-size:12px;line-height:1.6;box-shadow:0 6px 20px #0004}
+.guide.on{display:block}
+.guide:before{content:"";position:absolute;right:17px;top:-8px;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #252525}
+.guide button{display:block;width:100%;margin-top:10px;border:0;border-radius:8px;background:#fff;color:#e60020;padding:8px;font-size:12px}
+.toast{display:none;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#000c;color:#fff;border-radius:8px;padding:12px 18px;z-index:60;font-size:12px;white-space:nowrap}
+.toast.on{display:block}
+</style>
+
+<style id="minimal-diff-v4">
+/* [V4-1] 仅修正租赁合同查询图标完整展示与居中 */
+.ico.contract-ico{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+}
+.contract-icon{
+  width:34px;
+  height:34px;
+  object-fit:contain;
+  object-position:center;
+}
+
+/* [V4-3] 仅替换手机状态栏右侧信号/Wi-Fi/电池绘制；不改变状态栏高度/位置 */
+.status-right-v4{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  height:100%;
+}
+.cellular-v4{
+  width:17px;height:12px;
+  display:flex;align-items:flex-end;gap:2px;
+}
+.cellular-v4 i{
+  display:block;width:2.5px;background:currentColor;border-radius:1px;
+}
+.cellular-v4 i:nth-child(1){height:4px}
+.cellular-v4 i:nth-child(2){height:6px}
+.cellular-v4 i:nth-child(3){height:9px}
+.cellular-v4 i:nth-child(4){height:12px}
+.wifi-v4{
+  width:16px;height:12px;position:relative;overflow:hidden;
+}
+.wifi-v4:before,.wifi-v4:after{
+  content:"";position:absolute;left:50%;transform:translateX(-50%);
+  border:1.7px solid currentColor;border-color:currentColor transparent transparent transparent;
+  border-radius:50%;
+}
+.wifi-v4:before{width:16px;height:16px;top:1px}
+.wifi-v4:after{width:9px;height:9px;top:5px}
+.wifi-v4 i{
+  position:absolute;width:3px;height:3px;border-radius:50%;
+  background:currentColor;left:50%;bottom:0;transform:translateX(-50%);
+}
+.battery-v4{
+  width:22px;height:10px;border:1.4px solid currentColor;border-radius:3px;
+  position:relative;box-sizing:border-box;
+}
+.battery-v4:after{
+  content:"";position:absolute;right:-3px;top:2px;width:2px;height:4px;
+  background:currentColor;border-radius:0 1px 1px 0;
+}
+.battery-v4 i{
+  position:absolute;left:1.5px;top:1.5px;right:1.5px;bottom:1.5px;
+  background:currentColor;border-radius:1px;
+}
+</style>
+
+<style id="minimal-diff-v5">
+.ico.contract-ico{display:flex!important;align-items:center!important;justify-content:center!important;overflow:visible!important}
+.ico.contract-ico .contract-icon{display:block!important;width:38px!important;height:38px!important;max-width:92%!important;max-height:92%!important;object-fit:contain!important;object-position:center center!important;margin:auto!important}
+</style>
+
+<style id="minimal-diff-v6">
+.mobile-home{padding-bottom:58px;background:#f5f6f8}
+.home-brand{height:176px;background:#e60020;color:#fff;padding:24px 22px 18px;position:relative}
+.home-brand-logo{position:absolute;right:16px;top:17px;width:108px;height:38px;object-fit:contain}
+.home-brand-cn{font-size:20px;line-height:1.35;padding-top:38px}
+.home-brand-en{font-size:10px;letter-spacing:.65px;opacity:.86;margin-top:7px}
+.home-common-title{font-size:18px;color:#252b35;margin:20px 24px 14px}
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 22px}
+.home-func{height:128px;border:1px solid #edf0f3;background:#fff;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;color:#26364d;font-size:15px}
+.home-func-iconbox{width:54px;height:54px;border-radius:14px;background:#fff0f2;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.home-func-icon{width:39px;height:39px;object-fit:contain}
+.home-func.query-entry{border-color:#e60020}
+.home-func.query-entry .home-func-name{color:#e60020}
+.home-new{position:absolute;right:-5px;top:-5px;width:34px;height:34px;border-radius:50%;background:#e60020;color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center}
+.home-func.other-entry{grid-column:1 / 3;width:calc((100% - 14px)/2);justify-self:center}
+.mobile-home .nav{z-index:6}
+</style>
+
+<style id="minimal-diff-v6-corrected">
+.mobile-home .home-brand-cn{
+  padding-top:14px!important;
+  margin-top:0!important;
+  text-align:center!important;
+}
+.mobile-home .home-brand-en{
+  text-align:center!important;
+}
+</style>
+
+<style id="v65-hide-scrollbar-minimal-diff">
+#detail,#pdf{
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+#detail::-webkit-scrollbar,#pdf::-webkit-scrollbar{
+  width:0;
+  height:0;
+  display:none;
+}
+</style>
+
+<style id="v67-filter-caret-minimal-diff">
+#list .filter .filter-caret{
+  transform:translate(4px,-2px);
+}
+</style>
+<style id="rent-query-v02">
+/* V0.2 借据维度：沿用 V6.10 样式体系，新增分期横向表格展示 */
+#rentList,#rentDetail{scrollbar-width:none;-ms-overflow-style:none}#rentList::-webkit-scrollbar,#rentDetail::-webkit-scrollbar{display:none}
+.rent-query{margin:11px 14px 8px;background:#fff;border-radius:11px;padding:12px}
+.rent-query label{display:block;font-size:11px;color:#8794a6;margin:3px 0 5px}
+.rent-query input{width:100%;height:35px;border:1px solid #e1e6eb;border-radius:8px;padding:0 10px;color:#26364d;background:#fff;font-family:inherit;font-size:12px;min-width:0}
+.rent-query .two{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.rent-query .group{margin-bottom:8px}.rent-query .run{display:block;width:100%;border:0;border-radius:18px;background:#e60020;color:#fff;height:36px;margin-top:10px;font-size:12px}
+.rent-item{cursor:pointer}.rent-item .code{margin-bottom:6px}.rent-item .rent-top{display:flex;justify-content:space-between;align-items:start;gap:8px}.rent-item .rent-period{font-size:11px;color:#8290a5;flex-shrink:0}.rent-item .name{margin:4px 0 8px}.rent-item .rent-date{font-size:11px;color:#8794a6}.rent-figures{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}.rent-figure{background:#f5f6f8;border-radius:8px;padding:9px}.rent-figure small{display:block;color:#8794a6;font-size:10px;margin-bottom:5px}.rent-figure strong{font-size:13px;font-weight:600;color:#26364d}.rent-empty{padding:25px 12px;text-align:center;font-size:12px;color:#929fb0}.rent-notice{margin:9px 14px;color:#929fb0;font-size:10px;line-height:1.5}.rent-item:focus-visible{outline:2px solid #e60020}
+.rent-open{font-size:11px;color:#e60020;text-align:right;margin-top:10px}.rent-open span{font-size:17px;vertical-align:-1px}
+.rent-table-card{padding:12px 10px}.rent-table-title{display:flex;align-items:center;justify-content:space-between;font-size:14px;margin:0 4px 12px}
+.rent-table-title button{background:#e60020;color:white;border:0;border-radius:20px;padding:7px 11px;font-size:11px;font-family:inherit}
+.rent-table-scroll{overflow-x:auto;overflow-y:auto;max-height:390px;scrollbar-width:none;-ms-overflow-style:none;border-radius:7px}
+.rent-table-scroll::-webkit-scrollbar{display:none}
+.rent-table{border-collapse:collapse;white-space:nowrap;min-width:100%;font-size:11px;color:#26364d}
+.rent-table th{position:sticky;top:0;background:#f5f6f8;color:#8794a6;font-weight:400;padding:12px 10px;text-align:right;border-bottom:1px solid #e9edf1}
+.rent-table th:first-child,.rent-table td:first-child{text-align:left}
+.rent-table td{padding:13px 10px;text-align:right;border-bottom:1px solid #edf0f3;background:#fff;font-variant-numeric:tabular-nums}
+.rent-table tr:last-child td{border-bottom:0}.rent-table-hint{color:#929fb0;font-size:10px;text-align:center;margin-top:12px}
+
+</style><style id="rent-v03-minimal-diff">
+/* V0.3：借据列表的租金合计字段改为普通文本排版 */
+.rent-item .rent-unpaid-red{color:#e60020;font-weight:600}
+/* V0.3：明细首列（期数）固定，表头同时固定，遮挡关系明确 */
+.rent-table th:first-child{position:sticky;left:0;top:0;z-index:4;background:#f5f6f8;box-shadow:1px 0 0 #e9edf1}
+.rent-table td:first-child{position:sticky;left:0;z-index:2;background:#fff;box-shadow:1px 0 0 #edf0f3}
+</style>
+<style id="rent-v04-minimal-diff">
+/* V0.4：仅租金还款查询新增/调整，不触及合同查询基线 */
+.rent-search-wrap{position:relative}
+.rent-search-wrap .rent-search-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);height:17px;width:17px;color:#9aa6b5;pointer-events:none}
+.rent-query .rent-search-wrap input{padding-left:36px}
+.rent-top-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.rent-note-state{font-size:11px;color:#8290a5;font-weight:400}
+.rent-pagination{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:13px 4px 1px;font-size:12px;color:#657389}
+.rent-pagination button{width:30px;height:28px;border:1px solid #e1e6eb;background:#fff;border-radius:7px;color:#e60020;font-size:21px;line-height:20px}
+.rent-pagination button:disabled{color:#bcc4ce;background:#f5f6f8}
+.rent-pagination small{width:100%;text-align:center;font-size:10px;color:#929fb0}
+</style>
+<style id="rent-v05-incremental">
+/* V0.5 仅租金查询，保留既有合同模块源码 */
+#rentList .rent-query{margin:11px 14px 7px;padding:0;background:transparent}
+#rentList .rent-query .group{margin:0}
+#rentList .rent-search-wrap input{border:0;border-radius:22px;background:#fff;height:39px;padding-left:38px}
+#rentList .rent-search-wrap .rent-search-icon{left:14px}
+.rent-item .rent-name-main{font-size:14px;font-weight:500;margin:6px 0 8px;color:#26364d}
+.rent-item .rent-money{color:#e60020;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+.rent-item .rent-meta-line{font-size:12px;color:#8190a6;line-height:1.85}
+.rent-collapse-head{margin:13px 14px 7px;border-left:4px solid #e60020;padding-left:7px}
+.rent-fold{border:0;background:transparent;color:#26364d;width:100%;padding:0 3px 0 0;display:flex;justify-content:space-between;align-items:center;text-align:left;font:inherit;font-size:15px;cursor:pointer}
+.rent-fold-caret{color:#8794a6;font-size:20px;line-height:20px;transform-origin:center;transition:transform .15s}
+.rent-fold[aria-expanded="true"] .rent-fold-caret{transform:rotate(180deg)}
+.rent-fold-panel{margin-top:0;margin-bottom:6px}
+.rent-fold-panel[hidden]{display:none}
+.rent-fold-panel .kv:last-child{border-bottom:0}
+.rent-panel-subnote{font-size:10px;color:#929fb0;line-height:1.5;padding:9px 0 2px}
+</style>
+<style id="rent-period-branch">
+.rent-dim-badge-wrap{padding:10px 14px 0}.rent-dim-badge-wrap.detail{padding-top:12px}.rent-dim-badge{display:inline-flex;align-items:center;height:22px;padding:0 10px;border-radius:11px;background:#fff0f2;color:#e60020;font-size:11px}.period-item .rent-name-main{font-size:16px;font-weight:600;line-height:1.45;margin:6px 0 8px;color:#26364d}.period-item .rent-meta-line{font-size:12px;color:#8190a6;line-height:1.8}.rent-money-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:11px;padding-top:10px;border-top:1px solid #edf0f3}.rent-money-grid label{display:block;font-size:10px;color:#8794a6;margin-bottom:5px}.rent-money-grid .rent-money{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;color:#26364d}.rent-money-grid .rent-money.unpaid,.rent-money-grid .rent-money.due{color:#e60020}.receipt-pill{display:inline-flex;align-items:center;height:22px;padding:0 8px;border-radius:11px;font-size:10px}.receipt-full{background:#e7f8ed;color:#169c61}.receipt-partial{background:#fff1dc;color:#bd7a00}.receipt-none{background:#ffecef;color:#db4256}.rent-item.period-item .code{line-height:1.5}.rent-branch-note{margin:9px 14px 0;color:#929fb0;font-size:10px;line-height:1.5}.rent-table tbody tr.is-current td{background:#fff8f8}.rent-table tbody tr.is-current td:first-child{box-shadow:inset 3px 0 0 #e60020,1px 0 0 #edf0f3;background:#fff4f4}.rent-table tbody tr.is-current td:last-child{position:relative}.rent-table tbody tr.is-current td:last-child:after{content:"当前期";display:inline-flex;align-items:center;justify-content:center;margin-left:6px;height:16px;padding:0 6px;border-radius:9px;background:#fff0f2;color:#e60020;font-size:10px}.rent-summary-line{font-size:10px;color:#929fb0;line-height:1.5;margin:0 4px 8px}.rent-item .rent-top{align-items:center}.
+</style>
+
+<style id="rent-period-v02">
+.rent-date-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}.rent-date-label{display:block;font-size:11px;color:#8794a6;margin:0 0 5px}.rent-date-wrap{position:relative}.rent-date-wrap input{width:100%;height:35px;border:1px solid #e1e6eb;border-radius:8px;padding:0 30px 0 10px;color:#26364d;background:#fff;font-family:inherit;font-size:12px;min-width:0}.rent-date-wrap .cal{position:absolute;right:9px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:#9aa6b5;pointer-events:none}.rent-strong{font-weight:700;color:#26364d}.rent-current-card .kv:last-child{border-bottom:0}.period-item .rent-meta-line .line-gap{display:inline-block;min-width:12px}.rent-item.period-item .code{margin-bottom:4px}.rent-money-grid{grid-template-columns:repeat(3,1fr)}
+</style>
+</head><body><div class="wrap"><div class="phone"><div class="screen"><div id="status" class="status"><span>9:41</span><div class="status-right-v4">
+  <span class="cellular-v4"><i></i><i></i><i></i><i></i></span>
+  <span class="wifi-v4"><i></i></span>
+  <span class="battery-v4"><i></i></span>
+</div></div>
+
+<div id="mobileHome" class="page on mobile-home">
+  <div class="home-brand">
+    <div class="home-brand-cn">浙江稠州金融租赁有限公司</div>
+    <div class="home-brand-en">ZHEJIANG CHOUZHOU FINANCIAL LEASING CO.,LTD.</div>
+  </div>
+  <div class="home-common-title">常用功能</div>
+  <div class="home-grid">
+    <div class="home-func">
+      <div class="home-func-iconbox"><img class="home-func-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABECAYAAADaz4jLAAAEBklEQVR4nN1bu3HjMBB91KgJhkxuFKsBF+AZtaH4KnGsNjTjAtyAY44ThSyDFwjkQeACBLlvIcovOR89BMmHtx/srqu+7/EMdFVzdD/W/mUAqPvbd/k3AqpSZHgf/wbgkHHLFQDq/vZp9lIBzMlwJOQSEMO1BCmmZHRV8w7gRFzSlBQzMrqq+Ys8NbTu31zlmBFCJyPDLFoAX0DcUTpFAXFVtQC+2I52z1zM4Ry5nv0Bw853VdPhHm1CUgaiqWRQlZEwjYtmFxO+p63728fadUPsWAu5Fw6JaKEkAhiVchF+dfBMSg0KGc5PSDtHs2u3jkTIycthVGApoxauXdkOLkHIG2N9NRkRezYLf46QNrh8YKiD5jN8FMgWv4RranUwyJiogrBmEhF1qKEiIyLNTrPmAoTqUJuKVhkTx1nq+G3xHLbPoEt34fOkqJYNNhk/5PWW4o/mZi0ZqocTQCXfJLQ+ESpytGSEDy+tFOrztGSUCqNFwDYTSlq85HnB/1Wb87I+Qzq6a3MPFRmRtJhygswA/RjAUAY9LZ4Ds6DjQ03Gk9QxKSQxTsosnyGpw2T3IutSTsoUMiLqOLEJiRSSWlb9hBlNpIILjRBXeZfMg1YdZ7cKjpD7Ji2AnzU7ONOUopYXLTpqqf7qFUCXkw9kdObodVaTXmtmw9l3ekPmWON+3pjru6p7MRIsG8+MUYQQJj3WARa9VgD3CNNVDcAjw3xGg06GpwhAT4SpEkLQyCCaRVECfKjJUJLgJ2pZBKw99+SsvdqBLiShxb0qlhVWE8/UjEXNDsytUkbmS1HlTpgPG+7lkJE5orQq08x5PGWRqnmPvV82GYlUe4BJIuQhbBBdhGsScpI4AJlkzEiUOkq0BDkKdHNhHDJS81R4Ugi0QpKMUoNlM+8QC6X12jA73BduZDS0JogoMrrsnh82iXy5L2lyp+4bHb5IRsJZliSCOWY9h7bubx+xSpdU0C1FxBHl25SHrmqOE58Rm+cs+acOAqxGo0b11f3t+4GMmDyfFTodTDZCqs2GZiLZqTR3+RswMcWRjFg/4jflEQH8av4FeMwzTLpUW4Xb5HNXNcdhw3eAbZdq6/CVPyhjYj9bVIULuzXWn2Br/7u8Pwm5+NEkDKWbU4WXkWrLiv4mD2udAZx3ERPZ6niSutI+fG8stEomssUI0sFYsXu8gIkA/zfI1SdW3e9HDgnSEX6rJgJAp9q5e192wM0CEhmqYfRXxg4FJm5eBXvcc/TQiZ66qilVXJlr7hxccsTGJEzvnZe9omxlyccJd3WmMl7mWIOIrmqOO2DclWeG1PFjnceX5sNM8VDcqfvbp5unYKS8SyFtRFvgPcYeMJCujg+HImtEm9FzSRIb/wBEa/Igp304pgAAAABJRU5ErkJggg==" alt=""></div><div class="home-func-name">客户拜访</div>
+    </div>
+    <div class="home-func">
+      <div class="home-func-iconbox"><img class="home-func-icon" src="data:image/png;base64,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" alt=""></div><div class="home-func-name">电子进件</div>
+    </div>
+    <div class="home-func">
+      <div class="home-func-iconbox"><img class="home-func-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAABACAYAAABC6cT1AAADfElEQVR4nO1bPW7bMBT+6HpJb6ChQJUCvYG9ZCg65BLOAQzEQOGpR+isxQFygPoSHYoMWeylF0i0lVOnTu2iDqJa+oWSnvhnKu4HGI5ohuSn9/j48YkSVVVBhxT5TP05Q5rYZ1W5d21ENMQV4TWAhWujEbDKqvLGpQFRVRWkyK8BbDwNKibmttafqO8xkgZqD7XCRFl7rLCellNTYVaVwn4s4aDi0I6W2bj7BMAFKds6jC0oWgharT6T/irPE/+JnxpOlrgxqpugSdkg8CFDh4BFPIaykyLfZlV5FbIPHVxXj6HsFqG9SgeXeJS1Paa7s1w9q8orKfL7wGNJb44DgOs20CO20DS67bhGt5ypALhCfQPmtu2wLZ4SlJWdPHB0FveFkyU+yNVd1tnYyqwP0ZSbFLlTgkNLhgKHmZcVMDy6cy3uRbnZZEsY2d+NqncBoOC2n5Ryo1CetgMvt7YAsOPmEIcqN5qmGgK2NTTYeNpGirz3ocNQ5RZNvbVY7hbAA4BHrewSwJLUWwPo3OkluZy1BNNbAF9wSBqq7CMp693pJUncgIZ0Gx5VHR3rrgZTJU5jyQPjf+iN6QyIqRKng6bu3YY7/aLL3YMot1RUWtc4gig3V5UGsucGcA6e1d9xO+C6+uD123P+7A2jziW57hRdwea4o7sX5HqJp8R0nOPpWt6ZKgul3Apmvbb+9lLk1N0bYjR6mwRM76YlWeWG+ubR6L7EP5J3aJ/Tq77GU13OmqnSRaCVNGeLmixxoPYytTpwd4fsQ0FJE9fAyukPSUaMhTjFXH2s8wRjJe6sDkdJXCN9MAWGiKaxEHfJ/BgxFuJtW0zq7s/H4gb3/bu2G+Y52zOSJ45+K+qRnX24IGniisTBdtiwVhfkes1pO1nipuObMEhY5e7U6r259SSJaw8SdGw7lFlBrjdS5NddN0B8x+vPOIya0U4fSZHTvmNglVXlzdEsrqxxjLchNlLksyRdPQLWKR0F+QYgQ50cOQPwE8Bvh/Zequ8zAD8AvNJ/TIn4VzC3nxZ4C+CTXnCqrn66xKeo3UuPrguVUfXyNCSVpyoUU5gJeju0K0UOeHhBzjemLTls39igPzX9AsD7QP3/ogVNVC9w/FcrP8TsbALU81ClcXsT8ZYwtXvMuX8v6NvEDXw99OsKblLk5s7DY95KPBYiv+K5B2pj/AFt9TL1iU5S4wAAAABJRU5ErkJggg==" alt=""></div><div class="home-func-name">审批</div>
+    </div>
+    <div class="home-func query-entry" data-go="home">
+      <span class="home-new">NEW</span>
+      <div class="home-func-iconbox"><img class="home-func-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA6CAYAAAAOeSEWAAADWUlEQVR4nO1bu43jMBB9NLYJZafEUOwGXMABbsPxVrKx2xCgAtzAxoITZcsyeMGRBkXNUPyIsqD1i3ZtUjOPw+F8KIsf/DkBOGNZPACgUkOX8xAp6pP+k9LvAUBWavgOfZ7QZK85Ss2gjSWtSZ4BNEvKOMQokYiLFPXf0MF67BXhRINlrEEWCFRGivoTwCVDxs3a+hN8MJ/3iQINKKtcpKhZH9OL4bOmrZNv3BkAKYMje49xfAraSkFbURPlLHqjdNFzjoSMRor6s1LDlzun5Da+E59VzFiKaF+p4coteqWGThNqia8bajsXI6uVdN3h6I5jfLmlLMPI6UATnoSrtQ4oHyZWjQ1Very7sBPrvpQsZ9XEx1FuM7LuFizrQqZMCjlQN0c2Mwp4Q+bWyObGdxejsLQ1sjEpYghGi7c1svClewFwF+th//NqstRhlFRubqkQIMEkHmT2E4DZeP1qywLOVtOIsm5ovH45WSZbaqSoP0MsPFNEjMBVPWujxVThBv9Jt3DaL067hjvBjwBGC/lRqeFbitodyNaEkfCejgaVGjqtA2WhCwDo73vimaxst9Qz23hySAQ+kEVMKwbwVi82YvVqdF0NABBKKV+hnZKUUwU1AKBSw2xjL8YHHRhdudr4SyiljJBbgoAoZWJKtwjSPazOimdeb5Mt2VLtQ4txF447mOL/DvBFA0f4SdY3KBPRfeMlQHBpR2SdgUA6cXPgZTfucmAR7gHcSbJ7xcszqDXxq8h608Wc2jLHVy25XJ+ZneqTO/HZhBs0H2Jja/AtQopsN/QsKcwr2EbBGD+S+/TZgIulHFxmXKJUMnOxc+MDUCyZcEEW5LEFQwIaI8McUJM7GOhAnCigAlGfSlGfiLqUzGORkJB4kqEjgM6QnWzf1FzWEiwxvz2p0zY5vTTzpKjdyqsB+Dibet9iC6asMttbWiiPnuxIKerTgTk4ku5bCMx1+F33WfpGYIRflUG9ye4Vb7J7xZvsXvEmu1e8ye4VpckG3eKthWJkA4tytzpJfcUgCEXIaoWphkBINXUu1b1Y4zcCT1BXlgWbfC5uax5QXEMgtfUTjbXIsq0W3dHI7oyEoPQLJEGNM/1OhcRyzXkSxmdjrxnmIIG0KxB9uC2tDyo1dP8A12FlpjSzwpcAAAAASUVORK5CYII=" alt=""></div><div class="home-func-name">综合查询</div>
+    </div>
+    <div class="home-func other-entry">
+      <div class="home-func-iconbox"><img class="home-func-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABCCAYAAADzNE40AAADuElEQVR4nN2bP27bMBSHPwkevPQA3iIXBbIFMLo4u4EuOUSWDg0KBOg5ChQo3MFLDpGlQA8gdDGQLUvjLbqCN3UIlVAUn0RJpGz5t9imaFGf3tPjHz1GeZ4zhLIoWaivF0Dxfak+U6P6Vn0+zPLdlo6KQsFpMNe8QXRVygtwK1jvcArKB1Cd1rN8d9dUyRtcFiXXwI2Xk7mrFrI3XEtLFe4F8GA5fqF9XzieEwTIznCOUEWguOsaGFQ7RRCqa+uz2UYnOAcXTOkB1NAuQtv94RrAgkA5XEc6y3dfzTrOcA1uOBiUqSxKFlK7TnAKbCMcdgrLh9DEsd61UF7x82NSI1wWJT+puuLB3LCNauHUQ2uCHa0bmoqlA0JUTMcCBkJAkcL9LN99HOKifEmy3MJStg55ISFUgRv7c6bLZjnTHUcJBgacNnY7CZmWOxmrgQZns9qYwaBsOTNCji46mtLhzAhpmymPSjGILnnU40YXFZY7OZeEt4HzUbuktgZaaArs9QKbp0XPnFUmoscwhtSApi3+ttchJ5SX06C6tD2oOkIVmmZRcomCtA2/egUSiwu1/e+UbmC6plmUXE6wzwBaS0XcBbDMogQaRjeWBacU+As81TSzAq603/fAH6lyjIc1fW3+p5/rRi1RSPU3Rv0lcAvMhWa+UAZD/V5J12Vzy1aRUllAWsdcdnDTT5ayFXAu1L9CuCHiMkMLmQHJ5XjdarUE0Vo+4IbQh4bj722FMf1Df5cOv67Ne0vZ74bz/bMV2izX5GYlqU5TGq5Jq2Vtp1JPwKNw7B4hwnpxSwVgAq5tLydU/S3wjfIFPwI/kEP7L6pWre0KomfOzBVl6xsT39I67GCKae8ivhQUDOxuGfJF/aCKbVOFPuNDF4U+f6HCcmZoPoklvoN04kMtYRRwZlDpMiY8OsXweieHds19c5V+0t3y5Kz3Cic8B6MOLGZAMV0zmPXUzQzqmiacbbQyWuuV4IQR/jLUq63Q1qv0c2qEb7rnzRjdU+rEbe65GRng3ApXMwEN9vx5BpwDt+LwS3DPpbRc50MeAW/BIbFNSI+CwHlfHSezc16WBs/BPWtPAgz+ztzx3cEeeAd81wtHlZJoC2izfLeVMp7aJpNKgHCAzIemBFffacCDADokj69n+e4uVAL3GvynejhmxL/e4NCp99AD1NgyQ0NblQRXH5sm2u4EkTZOdN0wIWbtjnm7S2MqcoiNSqEhnfOrQ28xc9mm4qIUNZg/6BYzSRoslN/D2zYIetkc+B8BH8lPvsFJEAAAAABJRU5ErkJggg==" alt=""></div><div class="home-func-name">其他</div>
+    </div>
+  </div>
+  <div class="nav"><div class="activeNav"><img class="ref-icon nav-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA7CAYAAAAn+enKAAACPklEQVR4nOWbQXbDIAxEcV8vkWXvf6gscwx3RZ/7AmI0GgFJZo2FvgVClu3jPM/ySfpa7cBsfRzw92oHUD2On7+9dzvvB2vnyNzDVyervM62bLC2SkkEthwtBXN2ZMNjqyplDyOOjsagsN6xcmCFox4b3mukwApHR3vWWr7I/DJghaNogopAS5KWJ5Myq6AHyGTwcIS9k3qPEms8E+kQMHtGotDIOC80DRwtCEZjPCvBA00BK6ofdQWFQruBd4RFrq1zuoBXwyIZfgQNH0u7wbI3B4rwbrCI6HP4FWEt2ybwrrCRI6sLnJVJURvW/N6oX+dqJi0VLBMhDwzTPXmKcHZkRw5ljr+d9wM+h5XVT8tR9kZ7of8taUWSiDpkza1YfcMIR5exslRURHpKI165HaLQT1la0Uu2pGjfjuxYNiBgjyMeRd8meKG7Dw8zoaNCoc3HQ6Zptkrebqj5ePgukb7KzNLvEumroAbALpFGmgCjYEDn8K6RZo7QcC29I7QlV6X1CtCjY4p6t7RyT7M3t/pGv0zLhrYSVKTjQT88zF7ebBkK97QYY1W7QLu7lohWQlvq+SX7iie6p+v1kb2KzCn9bImFtgqISIJqSdrxUC7vVsTZ+a+St3hWQcuaeIy80NE+lWcVTP/WshTtKvAWOqldS2WkFeNLmdCmzYJmS9ilfWkWOlKvT/sifsZ7JkRTfwFAoLPfXqZm6Z5mZOOelvzkMSMb97Tsr5bsbNzT0t94MrNxT0v2cEvRF2uofgHallcDhDKOpwAAAABJRU5ErkJggg==" alt="">协作</div><div class="activeNav"><img class="ref-icon nav-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA5CAYAAABqMUjBAAABoUlEQVR4nO1bS64DIQwLT71El73/obrsMXirSiM0fELsBFG8rGgSj5kQEk3KOcsv4S86AG88Ip1/0qu5vZ75ndA+k/eW7pGsAUXejfAs0RJW4nTCKKIlZolTkxaLrMU2TWFNQKValv/2QCE8ErAmUGQ2hxNmHjUt26N2oYQRAbF9uFRayALCagtGuPbkGdVSzeZI7qAqzCBrBYQw87ytYVZlmsIe6s74+LnroZlwxHbuoRUTRWHPZKX1dbb07jiEd8chjEDvqPqkVx5dM7JOE5u7wtcAa4TK37SkWkeVuS/9zO9kLT48ixeawsjrouU6WCIkaWlIax9Qbz2E8IwCI0Raa8LbtB79rJ4v154WQw2GLeg7zCa9XJv2C3RvGmkvZD58JYA8ckZAnR6yC4rlelrMzscZlw4ibHqIhEZtuMIRXUyNT7fp4R16yqDtiTiVlpqA2D4ghD3raKvPLY8l6uTBcy6M8HFGLRqsOEj7ohYbXOEVp/5XwG9LK6suYlB4dWIi9zGeUcvumCa8enISuY/RpPDKpGuxuX8CEI3zDu+Of0qvMHqp0Y4qAAAAAElFTkSuQmCC" alt="">我的</div></div></div>
+
+<div id="home" class="page"><div class="head"><button class="back" data-go="mobileHome">‹</button>综合查询<button class="more">···</button></div><div class="search">输入功能名称/关键字查询</div><div class="count muted">共1项功能</div><div class="card menu" id="menu"></div><div class="nav"><div class="activeNav"><img class="ref-icon nav-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA7CAYAAAAn+enKAAACPklEQVR4nOWbQXbDIAxEcV8vkWXvf6gscwx3RZ/7AmI0GgFJZo2FvgVClu3jPM/ySfpa7cBsfRzw92oHUD2On7+9dzvvB2vnyNzDVyervM62bLC2SkkEthwtBXN2ZMNjqyplDyOOjsagsN6xcmCFox4b3mukwApHR3vWWr7I/DJghaNogopAS5KWJ5Myq6AHyGTwcIS9k3qPEms8E+kQMHtGotDIOC80DRwtCEZjPCvBA00BK6ofdQWFQruBd4RFrq1zuoBXwyIZfgQNH0u7wbI3B4rwbrCI6HP4FWEt2ybwrrCRI6sLnJVJURvW/N6oX+dqJi0VLBMhDwzTPXmKcHZkRw5ljr+d9wM+h5XVT8tR9kZ7of8taUWSiDpkza1YfcMIR5exslRURHpKI165HaLQT1la0Uu2pGjfjuxYNiBgjyMeRd8meKG7Dw8zoaNCoc3HQ6Zptkrebqj5ePgukb7KzNLvEumroAbALpFGmgCjYEDn8K6RZo7QcC29I7QlV6X1CtCjY4p6t7RyT7M3t/pGv0zLhrYSVKTjQT88zF7ebBkK97QYY1W7QLu7lohWQlvq+SX7iie6p+v1kb2KzCn9bImFtgqISIJqSdrxUC7vVsTZ+a+St3hWQcuaeIy80NE+lWcVTP/WshTtKvAWOqldS2WkFeNLmdCmzYJmS9ilfWkWOlKvT/sifsZ7JkRTfwFAoLPfXqZm6Z5mZOOelvzkMSMb97Tsr5bsbNzT0t94MrNxT0v2cEvRF2uofgHallcDhDKOpwAAAABJRU5ErkJggg==" alt="">协作</div><div class="activeNav"><img class="ref-icon nav-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA5CAYAAABqMUjBAAABoUlEQVR4nO1bS64DIQwLT71El73/obrsMXirSiM0fELsBFG8rGgSj5kQEk3KOcsv4S86AG88Ip1/0qu5vZ75ndA+k/eW7pGsAUXejfAs0RJW4nTCKKIlZolTkxaLrMU2TWFNQKValv/2QCE8ErAmUGQ2hxNmHjUt26N2oYQRAbF9uFRayALCagtGuPbkGdVSzeZI7qAqzCBrBYQw87ytYVZlmsIe6s74+LnroZlwxHbuoRUTRWHPZKX1dbb07jiEd8chjEDvqPqkVx5dM7JOE5u7wtcAa4TK37SkWkeVuS/9zO9kLT48ixeawsjrouU6WCIkaWlIax9Qbz2E8IwCI0Raa8LbtB79rJ4v154WQw2GLeg7zCa9XJv2C3RvGmkvZD58JYA8ckZAnR6yC4rlelrMzscZlw4ibHqIhEZtuMIRXUyNT7fp4R16yqDtiTiVlpqA2D4ghD3raKvPLY8l6uTBcy6M8HFGLRqsOEj7ohYbXOEVp/5XwG9LK6suYlB4dWIi9zGeUcvumCa8enISuY/RpPDKpGuxuX8CEI3zDu+Of0qvMHqp0Y4qAAAAAElFTkSuQmCC" alt="">我的</div></div></div>
+<div id="list" class="page"><div class="head"><button class="back" data-go="home">‹</button>租赁合同查询<button class="more">···</button></div><div class="search">输入合同编号/客户名称/合同名称</div><div class="filters"><button class="filter" data-filter="租赁类型">租赁类型<span class="filter-caret">⌄</span></button><button class="filter" data-filter="合同状态">合同状态<span class="filter-caret">⌄</span></button></div><div id="contracts"></div><div class="count muted" style="text-align:center">没有更多数据了</div></div>
+<div id="detail" class="page"><div class="head"><button class="back" data-go="list">‹</button>租赁合同详情<button class="more">···</button></div><div class="sect">基本信息</div><div class="card"><div class="kv"><span>合同编号</span><span>HZCZ20260824002221</span></div><div class="kv"><span>合同名称</span><span>浙江正杰新材料有限公司售后回租项目</span></div><div class="kv"><span>合同金额（元）</span><span>¥10,000,000.00</span></div><div class="kv"><span>业务类型</span><span>小微</span></div><div class="kv"><span>租赁类型</span><span>售后回租</span></div><div class="kv"><span>是否续租</span><span>是</span></div><div class="kv"><span>主办项目经理</span><span>李磊磊</span></div><div class="kv"><span>主办所属部门</span><span>义乌业务部</span></div><div class="kv"><span>协办项目经理</span><span>王小明</span></div><div class="kv"><span>协办所属部门</span><span>义乌业务部</span></div></div><div class="sect fileshead"><span>签约文本</span><span class="muted">共 5 份</span></div><div class="card" id="files"></div></div>
+<div id="pdf" class="page"><div class="head pdfhead"><button class="back" data-go="detail">‹</button>文件详情<button class="more" id="pdfMore">···</button></div><div class="pdf"><div class="paper"><div class="pt">浙江正杰新材料有限公司<br>售后回租项目合同</div><div class="line"></div><div class="line"></div><div class="line"></div><br><div class="line"></div><div class="line"></div><div class="line"></div><br><div class="line"></div><div class="line"></div><div class="seal"><b>★</b><span>合同专用章</span></div></div></div></div>
+
+<!-- 期次维度候选：按分期现金流列示，每张卡片对应一笔期次还款记录 -->
+<div id="rentList" class="page"><div class="head"><button class="back" data-go="home">‹</button>租金还款情况查询<button class="more">···</button></div>
+<div class="rent-dim-badge-wrap"><span class="rent-dim-badge">期次维度候选</span></div>
+<div class="rent-query">
+<div class="group"><div class="rent-search-wrap"><svg class="rent-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="rqKeyword" placeholder="请输入合同编号/合同名称/客户名称" autocomplete="off"></div></div>
+<div class="rent-date-grid">
+  <div><label class="rent-date-label">计划还款日（始）</label><div class="rent-date-wrap"><input id="rqDateStart" placeholder="yyyy/mm/日" autocomplete="off"><svg class="cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M7 3.8v3.4M17 3.8v3.4M3.5 9.2h17"/></svg></div></div>
+  <div><label class="rent-date-label">计划还款日（止）</label><div class="rent-date-wrap"><input id="rqDateEnd" placeholder="yyyy/mm/日" autocomplete="off"><svg class="cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M7 3.8v3.4M17 3.8v3.4M3.5 9.2h17"/></svg></div></div>
+</div>
+</div>
+<div class="count muted" id="rentCount"></div><div id="rentResults"></div>
+<div class="rent-notice">期次维度方案：每张卡片对应1笔分期现金流，可用于对比“借据维度”与“期次维度”的查询效果。模拟观察日：2026-10-22。</div></div>
+<div id="rentDetail" class="page"><div class="head"><button class="back" data-go="rentList">‹</button>期次还款明细<button class="more">···</button></div>
+<div class="sect">基本信息</div><div class="card" id="rentBasic"></div>
+<div class="sect">租金还款明细（当期）</div><div class="card rent-current-card" id="rentCurrent"></div>
+<div class="rent-collapse-head"><button class="rent-fold" id="rentQuoteToggle" type="button" aria-expanded="false" aria-controls="rentQuotePanel"><span>报价明细</span><span class="rent-fold-caret">⌄</span></button></div>
+<div class="card rent-fold-panel" id="rentQuotePanel" hidden></div>
+<div class="rent-collapse-head"><button class="rent-fold" id="rentMetricToggle" type="button" aria-expanded="false" aria-controls="rentMetricPanel"><span>指标</span><span class="rent-fold-caret">⌄</span></button></div>
+<div class="card rent-fold-panel" id="rentMetricPanel" hidden></div>
+<div class="sect">租金还款明细（全部）</div><div class="card rent-table-card">
+<div class="rent-table-title"><span>分期还款情况</span><button type="button" id="rentExpand">展开更多列</button></div>
+<div class="rent-table-scroll" id="rentTableScroll"><table class="rent-table" id="rentTable"><thead></thead><tbody></tbody></table></div>
+<div class="rent-table-hint" id="rentTableHint">按期展示 · 左右滑动查看</div><div class="rent-pagination" id="rentPagination" aria-label="分期明细分页"></div>
+</div><div class="rent-notice">模拟口径：未收租金=应收租金－实际已收租金。“核销情况”列按全部已收、部分已收、未收展示各期收款情况，不代表会计核销状态；呆账核销的实际核销金额另行记录、不计入已收。正式业务口径待确认。</div></div>
+<div id="overlay" class="overlay"></div>
+<div id="wxSheet" class="wx-sheet">
+  <div class="wx-actions">
+    <div class="wx-item"><div class="wx-icon">↗</div>发送给朋友</div>
+    <div class="wx-item" id="savePhone"><div class="wx-icon">⇩</div>保存到手机</div>
+    <div class="wx-item"><div class="wx-icon">★</div>收藏</div>
+    <div class="wx-item"><div class="wx-icon">···</div>用其他应用打开</div>
+  </div>
+  <button class="wx-cancel" id="wxCancel">取消</button>
+</div>
+<div id="guide" class="guide">点击右上角“…”可下载已签约文件<button id="guideOk">我知道了</button></div>
+<div id="toast" class="toast">暂无签约后附件</div><div id="sheet" class="sheet"></div><div id="dialog" class="dialog"><h3>下载提示</h3><p>可直接下载或复制链接到网页浏览器自行下载</p><button class="red">直接下载</button><button>复制链接</button><button id="cancel">取消</button></div>
+</div></div></div><script>
+const menu=[['contract','租赁合同查询','已签约完成合同及签约附件查询']];
+document.querySelector('#menu').innerHTML=menu.map((m,i)=>`<div class="row" data-go="list"><div class="ico contract-ico"><img class="ref-icon contract-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABFCAYAAAD+UTBQAAABZUlEQVR4nO2bQQ6CMBBFp8ZLuOT+h3LJMerCDyEIWDrYmY7/rUhMqH3+mTIkppyziIiMaXhfbPDIz7T3mUf29nK0j/uvFi3Fi+RqEVoB6/tYC7lZLu4JNyKuSlgtbkR0WxrWX/xqVKdGJBluSsMaigAUASgCUARQnRqtHoJanE7ms4ZmrSsFqadPS5aCtFLC9IgxDVmT0jAiJmplcNYAZrOG9di9xqQ0vEkQMRDhUYJIwGZZS1MRXtMgwkTMdDFrtKA6EZEkiLA0ZigCUARQzRqlj9g9zCXq9xE9bLIElgagCEARgCJAMxHemyoTAZqK8JwKJgI0F2GVim/rmiTCY4mYlUZLGSVrFc0a0V7CbBG+WZYmbxbhsW61nNlT2ESc/WFDiqhJd5r+rzHRc2PUlPeHiCXepVzZ1w5F/BMhe0QNFAEoAlAEoAhAEYAiAEUAigAUASgCUASgCEARgCIARQCKABQBXnEXdE+ZEJgmAAAAAElFTkSuQmCC" alt=""></div><div><div class="mt">${m[1]}</div><div class="ms">${m[2]}</div></div><span class="arrow">›</span></div>`).join('');
+const cs=[['HZCZ20260824002221','浙江正杰新材料有限公司售后回租项目','浙江正杰新材料有限公司','¥10,000,000.00','售后回租','合同签约','green'],['ZZCZ20260718001799','浙江凯瑞机械股份有限公司售后回租项目','浙江凯瑞机械股份有限公司','¥80,000,000.00','直租','合同起租','orange'],['ZZCZ20250214001037','宁波远景医疗设备有限公司售后回租项目','宁波远景医疗设备有限公司','¥52,000,000.00','直租','合同结束','blue']];
+document.querySelector('#contracts').innerHTML=cs.map(c=>`<div class="card contract" data-go="detail"><span class="state ${c[6]}">${c[5]}</span><div class="code">${c[0]}</div><div class="name">${c[1]}</div><div class="meta">客户名称：${c[2]}<br>合同金额： <span class="amt">${c[3]}</span><br>租赁类型： ${c[4]}</div></div>`).join('');
+const fs=[
+['售后回租合同（小微）_已签约.pdf','主合同','2.4MB · 电子签约文本',false],
+['担保连带责任保证协议_已签约.pdf','担保合同','1.1MB · 电子签约文本',false],
+['质押合同（自然人）_已签约.pdf','质押合同','0.8MB · 纸质签约文本',false],
+['付款申请书_已签约.pdf','申请书','0.5MB · 电子签约文本',false],
+['承租人股东会决议_已签约.pdf','决议文件','0.6MB · 电子签约文本',true]
+];
+document.querySelector('#files').innerHTML=fs.map((f,i)=>`<div class="file"><div class="fb"><div class="fn">${f[0]}</div><div class="fs">${f[1]}　${f[2]}</div></div><button class="view ${f[3]?'readonly':''}" data-readonly="${f[3]?'1':'0'}">查看</button></div>`).join('');
+function go(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('on'));document.querySelector('#'+id).classList.add('on');let s=document.querySelector('#status');s.className='status'+(id==='pdf'?' pdfstatus':'')}
+document.addEventListener('click',e=>{let x=e.target.closest('[data-go]');if(x)go(x.dataset.go)});
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('sel'));t.classList.add('sel')});
+const opts={'业务类型':['企业法人','民生工程','转型类国企','小微'],'租赁类型':['直租','回租'],'合同状态':['合同签约','合同起租','合同结束','暂挂']},ov=document.querySelector('#overlay'),sh=document.querySelector('#sheet');
+document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{let k=b.dataset.filter;sh.innerHTML=`<div class="sh"><button id="sc">取消</button><span>${k}</span><button class="ok" id="so">确定</button></div>${opts[k].map(v=>`<button class="opt">${v}</button>`).join('')}`;sh.style.display='block';ov.classList.add('on');let v='';sh.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{v=o.textContent;sh.querySelectorAll('.opt').forEach(z=>z.style.color='');o.style.color='#e60020'});document.querySelector('#sc').onclick=closeSheet;document.querySelector('#so').onclick=()=>{if(v)b.innerHTML=v+'<span class="filter-caret">⌄</span>';closeSheet()}});
+function closeSheet(){sh.style.display='none';ov.classList.remove('on')}ov.onclick=()=>{closeSheet();document.querySelector('#dialog').classList.remove('on')};
+document.querySelectorAll('.view').forEach(v=>v.onclick=()=>{
+  if(v.dataset.readonly==='1'){
+    const t=document.querySelector('#toast');t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1800);
+  }else{
+    go('pdf');
+    setTimeout(()=>document.querySelector('#guide').classList.add('on'),250);
+  }
+});
+const wx=document.querySelector('#wxSheet'),guide=document.querySelector('#guide');
+document.querySelector('#pdfMore').onclick=()=>{guide.classList.remove('on');ov.classList.add('on');wx.classList.add('on')};
+document.querySelector('#wxCancel').onclick=()=>{wx.classList.remove('on');ov.classList.remove('on')};
+document.querySelector('#guideOk').onclick=()=>{guide.classList.remove('on')};
+document.querySelector('#savePhone').onclick=()=>{wx.classList.remove('on');ov.classList.remove('on');const t=document.querySelector('#toast');t.textContent='已进入文件保存流程';t.classList.add('on');setTimeout(()=>{t.classList.remove('on');t.textContent='文本暂未上传，请耐心等待'},1500)};
+ov.addEventListener('click',()=>{wx.classList.remove('on');guide.classList.remove('on')});
+</script><script id="rent-query-script-period-v02">
+(function(){
+const menu=document.getElementById('menu');
+menu.insertAdjacentHTML('beforeend',`<div class="row" data-go="rentList" role="button" tabindex="0"><div class="ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/><path d="M18 19l2 2"/></svg></div><div><div class="mt">租金还款情况查询</div><div class="ms">期次维度候选｜按现金流期次查询还款情况</div></div><span class="arrow">›</span></div>`);
+document.querySelector('#home .count').textContent='共2项功能';
+function dateAt(year,month,day){return year+'-'+String(month).padStart(2,'0')+'-'+String(day).padStart(2,'0')}
+function parseDateLoose(v){if(!v)return '';v=String(v).trim().replace(/\./g,'-').replace(/\//g,'-');const m=v.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);if(!m)return '';return `${m[1]}-${m[2].padStart(2,'0')}-${m[3].padStart(2,'0')}`}
+function makeSchedule(startY,startM,day,principalEach,count,monthlyRate,paidAlloc,writeoff){let remainingPrincipal=principalEach*count;const rows=[];for(let i=0;i<count;i++){const y=startY+Math.floor((startM-1+i)/12),m=(startM-1+i)%12+1;const interest=Math.round(remainingPrincipal*monthlyRate*100)/100;const due=principalEach+interest;const paid=Math.min(due,paidAlloc[i]||0);const paidInterest=Math.min(interest,paid),paidPrincipal=paid-paidInterest;rows.push({period:i+1,date:dateAt(y,m,day),due,principal:principalEach,interest,paid,paidPrincipal,paidInterest,unpaid:due-paid,unpaidPrincipal:principalEach-paidPrincipal,unpaidInterest:interest-paidInterest,writeoff:0});remainingPrincipal-=principalEach;}if(writeoff){rows.forEach(r=>r.writeoff=r.unpaid)}return rows}
+const notes=[
+ {contract:'ZZCZ20261022000002',customer:'示例客户乙',contractName:'示例客户乙生产设备直租项目',note:'ZZCZ20261022000002-1',status:'呆账核销',rows:makeSchedule(2026,9,8,55000,4,0.02,[56100,20000,0,0],true),quoteName:'乙生产设备直租方案'},
+ {contract:'ZZCZ20261022000003',customer:'示例客户丙',contractName:'示例客户丙设备融资租赁项目',note:'ZZCZ20261022000003-1',status:'起租',rows:makeSchedule(2026,8,18,80000,4,0.01,[83200,0,0,0],false),quoteName:'丙设备直租方案'},
+ {contract:'HZCZ20261022000001',customer:'示例客户甲',contractName:'示例客户甲设备租赁项目',note:'HZCZ20261022000001-1',status:'起租',rows:makeSchedule(2026,6,23,120000,14,0.01,[136800,135600,134400,133200,0]),quoteName:'甲设备租赁方案'},
+ {contract:'HZCZ20261022000001',customer:'示例客户甲',contractName:'示例客户甲设备租赁项目',note:'HZCZ20261022000001-2',status:'已结清',rows:makeSchedule(2026,6,25,70000,3,0.01,[72100,71400,70700]),quoteName:'甲设备补充投放方案'}
+];
+const total=(rows,key)=>Math.round(rows.reduce((a,r)=>a+(r[key]||0),0)*100)/100;
+function solveRate(flows,times){function npv(rate){return flows.reduce((sum,f,i)=>sum+f/Math.pow(1+rate,times[i]),0)}let low=-0.9,high=2;for(let i=0;i<100;i++){const mid=(low+high)/2;if(npv(mid)>0)low=mid;else high=mid}return (low+high)/2}
+function quoteDerived(x){const rows=x.rows,finance=total(rows,'principal'),rent=total(rows,'due'),interest=total(rows,'interest');const first=new Date(rows[0].date+'T00:00:00Z');const issue=new Date(first.getTime());issue.setUTCMonth(issue.getUTCMonth()-1);const flows=[-finance,...rows.map(r=>r.due)];const monthly=solveRate(flows,flows.map((_,i)=>i));const xTimes=[0,...rows.map(r=>(new Date(r.date+'T00:00:00Z')-issue)/86400000/365)];const yearly=solveRate(flows,xTimes);const exFlows=[-finance,...rows.map(r=>r.principal+r.interest/1.06)];const exMonth=solveRate(exFlows,exFlows.map((_,i)=>i));const exYear=solveRate(exFlows,xTimes);const pct=v=>(v*100).toFixed(4)+'%';return {quote:{projectName:x.quoteName,finance,start:issue.toISOString().slice(0,10),end:rows.at(-1).date,rentTotal:rent,rentInterest:interest},metrics:{actualIRR:x.status==='已结清'?pct(monthly*12):'—',irr:pct(monthly*12),exTaxIRR:pct(exMonth*12),accounting:pct(interest/finance*12/rows.length),accountingExTax:pct((interest/1.06)/finance*12/rows.length),discount:pct(0.08),net:(interest-finance*0.005).toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2}),xirr:pct(yearly),xirrExTax:pct(exYear)}}}
+notes.forEach(x=>{const d=quoteDerived(x);x.quote=d.quote;x.metrics=d.metrics});
+function near(a,b){return Math.abs(a-b)<0.011}
+notes.forEach(x=>{x.rows.forEach(r=>{if(!near(r.due,r.principal+r.interest)||!near(r.paid,r.paidPrincipal+r.paidInterest)||!near(r.unpaid,r.due-r.paid)||!near(r.unpaid,r.unpaidPrincipal+r.unpaidInterest))throw Error('现金流金额不平：'+x.note+'期'+r.period)})});
+const money=n=>Number(n).toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2});
+const kv=(k,v)=>`<div class="kv"><span>${k}</span><span>${v}</span></div>`;
+function receiptStatus(r){if(Math.abs(r.paid-r.due)<0.011)return '全部已收';if(r.paid<0.011)return '未收';return '部分已收'}
+function receiptClass(s){return s==='全部已收'?'receipt-full':(s==='部分已收'?'receipt-partial':'receipt-none')}
+function buildPeriods(){return notes.flatMap((x,idx)=>x.rows.map(r=>({noteIdx:idx,contract:x.contract,customer:x.customer,contractName:x.contractName,note:x.note,noteStatus:x.status,period:r.period,date:r.date,due:r.due,principal:r.principal,interest:r.interest,paid:r.paid,paidPrincipal:r.paidPrincipal,paidInterest:r.paidInterest,unpaid:r.unpaid,unpaidPrincipal:r.unpaidPrincipal,unpaidInterest:r.unpaidInterest,writeoff:r.writeoff||0,receiptStatus:receiptStatus(r)})))}
+const periodItems=buildPeriods();
+let currentNote=null,currentPeriod=1,expanded=false,currentPage=1;const PAGE_SIZE=10;
+function topPriority(item){return item.date>='2026-10-01'&&item.date<='2026-10-23'&&item.receiptStatus!=='全部已收'?0:1}
+function render(){const keyword=document.getElementById('rqKeyword').value.trim().toLowerCase();const dateStart=parseDateLoose(document.getElementById('rqDateStart').value);const dateEnd=parseDateLoose(document.getElementById('rqDateEnd').value);const priority={'未收':0,'部分已收':1,'全部已收':2};const found=periodItems.filter(x=>!keyword||[x.contract,x.contractName,x.customer].some(v=>String(v).toLowerCase().includes(keyword))).filter(x=>(!dateStart||x.date>=dateStart)&&(!dateEnd||x.date<=dateEnd)).sort((a,b)=>topPriority(a)-topPriority(b)||a.date.localeCompare(b.date)||((priority[a.receiptStatus]??99)-(priority[b.receiptStatus]??99))||a.note.localeCompare(b.note)||a.period-b.period);document.getElementById('rentCount').textContent=`共${found.length}条现金流`;document.getElementById('rentResults').innerHTML=found.length?found.map(x=>`<div class="card rent-item period-item" role="button" tabindex="0" data-rent-note="${x.noteIdx}" data-rent-period="${x.period}"><div class="rent-top"><span class="code">${x.note}</span><span class="receipt-pill ${receiptClass(x.receiptStatus)}">${x.receiptStatus}</span></div><div class="rent-name-main">${x.contractName}</div><div class="rent-meta-line">客户名称：${x.customer}<br>合同编号：${x.contract}<br>期次：第${x.period}期<span class="line-gap"></span>计划还款日：${x.date}</div><div class="rent-money-grid"><div><label>应收租金</label><div class="rent-money due">¥${money(x.due)}</div></div><div><label>已收租金</label><div class="rent-money">¥${money(x.paid)}</div></div><div><label>未收租金</label><div class="rent-money unpaid">¥${money(x.unpaid)}</div></div></div><div class="rent-open">查看所在借据明细 <span>›</span></div></div>`).join(''):`<div class="card rent-empty">未找到符合条件的现金流期次</div>`}
+function paintPanels(x){const q=x.quote||{},m=x.metrics||{};const field=(k,v)=>kv(k,v===undefined?'—':v);document.getElementById('rentQuotePanel').innerHTML=field('方案名称',q.projectName)+field('融资金额（元）',q.finance===undefined?'—':money(q.finance))+field('租赁开始日',q.start)+field('租赁到期日',q.end)+field('租金总额（元）',q.rentTotal===undefined?'—':money(q.rentTotal))+field('租息总额（元）',q.rentInterest===undefined?'—':money(q.rentInterest));document.getElementById('rentMetricPanel').innerHTML=field('实际IRR',m.actualIRR)+field('IRR',m.irr)+field('不含税IRR',m.exTaxIRR)+field('会计收益率',m.accounting)+field('会计收益率(不含税)',m.accountingExTax)+field('贴现利率',m.discount)+field('项目净收益（元）',m.net)+field('XIRR',m.xirr)+field('不含税XIRR',m.xirrExTax);['Quote','Metric'].forEach(part=>{const btn=document.getElementById('rent'+part+'Toggle'),panel=document.getElementById('rent'+part+'Panel');btn.setAttribute('aria-expanded','false');panel.hidden=true})}
+['Quote','Metric'].forEach(part=>document.getElementById('rent'+part+'Toggle').addEventListener('click',()=>{const btn=document.getElementById('rent'+part+'Toggle'),panel=document.getElementById('rent'+part+'Panel');const opened=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!opened));panel.hidden=opened}));
+function paintTable(){const fullCols=[['period','期数'],['date','计划还款日'],['due','应收租金'],['principal','应收本金'],['interest','应收利息'],['paid','已收租金'],['paidPrincipal','已收本金'],['paidInterest','已收利息'],['unpaid','未收租金'],['unpaidPrincipal','未收本金'],['unpaidInterest','未收利息'],['receiptStatus','核销情况']];const cols=expanded?fullCols:[fullCols[0],fullCols[1],fullCols[8],fullCols[10],fullCols[11]];document.querySelector('#rentTable thead').innerHTML='<tr>'+cols.map(([k,label])=>`<th>${label}${k!=='period'&&k!=='date'&&k!=='receiptStatus'?'（元）':''}</th>`).join('')+'</tr>';document.querySelector('#rentTable tbody').innerHTML=currentNote.rows.slice((currentPage-1)*PAGE_SIZE,currentPage*PAGE_SIZE).map(r=>'<tr>'+cols.map(([k])=>`<td>${k==='receiptStatus'?receiptStatus(r):(k==='date'||k==='period'?r[k]:money(r[k]))}</td>`).join('')+'</tr>').join('');document.getElementById('rentExpand').textContent=expanded?'收起更多列':'展开更多列';document.getElementById('rentTableScroll').scrollLeft=0;document.getElementById('rentTableHint').textContent=expanded?'已展示全部台账字段 · 左右滑动查看':'默认展示主要字段 · 点击“展开更多列”查看更多';const totalPages=Math.max(1,Math.ceil(currentNote.rows.length/PAGE_SIZE));const pager=document.getElementById('rentPagination');pager.innerHTML=`<button type="button" data-page="prev" ${currentPage===1?'disabled':''} aria-label="上一页">‹</button><span>第 ${currentPage} / ${totalPages} 页</span><button type="button" data-page="next" ${currentPage===totalPages?'disabled':''} aria-label="下一页">›</button><small>当前借据共 ${currentNote.rows.length} 期</small>`}
+function openPeriod(noteIdx,period){const x=notes[noteIdx],row=x.rows.find(r=>r.period===period);if(!row)return;currentNote=x;currentPeriod=period;expanded=false;currentPage=Math.ceil(period/PAGE_SIZE);document.getElementById('rentBasic').innerHTML=kv('维度标识','期次维度')+kv('合同编号',`<span class="rent-strong">${x.contract}</span>`)+kv('合同名称',x.contractName)+kv('客户名称',x.customer);document.getElementById('rentCurrent').innerHTML=kv('借据编号',`<span class="rent-strong">${x.note}</span>`)+kv('当前期次','第'+row.period+'期')+kv('计划还款日',row.date)+kv('核销情况',receiptStatus(row))+kv('应收租金（元）',money(row.due))+kv('已收租金（元）',money(row.paid))+kv('未收租金（元）',money(row.unpaid));paintPanels(x);paintTable();go('rentDetail')}
+document.getElementById('rqKeyword').addEventListener('input',render);['rqDateStart','rqDateEnd'].forEach(id=>document.getElementById(id).addEventListener('input',render));document.getElementById('rqKeyword').addEventListener('keydown',e=>{if(e.key==='Enter')render()});document.getElementById('rentResults').addEventListener('click',e=>{const node=e.target.closest('[data-rent-note]');if(node)openPeriod(Number(node.dataset.rentNote),Number(node.dataset.rentPeriod))});document.getElementById('rentResults').addEventListener('keydown',e=>{const node=e.target.closest('[data-rent-note]');if(node&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openPeriod(Number(node.dataset.rentNote),Number(node.dataset.rentPeriod))}});document.getElementById('rentExpand').addEventListener('click',()=>{expanded=!expanded;paintTable()});document.getElementById('rentPagination').addEventListener('click',e=>{const action=e.target.closest('[data-page]');if(!action||!currentNote)return;const total=Math.ceil(currentNote.rows.length/PAGE_SIZE);const next=currentPage+(action.dataset.page==='next'?1:-1);if(next<1||next>total)return;currentPage=next;paintTable()});render();
+})();
+</script></body></html>
